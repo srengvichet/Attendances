@@ -1,0 +1,51 @@
+1. pip install facenet-pytorch opencv-python scikit-learn numpy matplotlib
+2. Strucutre:
+facial_attendance/
+│
+├── data/
+│   ├── student1/
+│   │   ├── img1.jpg
+│   │   └── ...
+│   ├── teacher1/
+│   │   ├── img1.jpg
+│   │   └── ...
+│
+├── models/
+│   ├── face_classifier.pkl
+│
+├── embeddings/
+│   ├── labels.npy
+│   └── embeddings.npy
+│
+├── face_detection_and_embedding.py
+├── train_svm_classifier.py
+├── recognize_and_mark_attendance.py
+3. Face Detection + Embedding Extraction(face_detection_and_embedding)
+4. Train SVM Classifier(train_svm_classifier.py)
+5: Real-Time Recognition & Attendance(recognize_and_mark_attendance.py)
+
+
+
+Running
+1. face_detection_and_embedding.py
+2. train_svm_classifier.py
+3. recognize_and_mark_attendance.py
+
+Testing trained model
+1. recognize_and_mark_attendance.py
+
+Running only add new person into datasets_new
+1. add_new_person.py
+
+
+
+Manage Face trained for Remove or List all trained face
+1. List all : python .\manage_faces.py --list
+2. Remove :  python .\manage_faces.py --remove "peng_chhaitith"
+3. Add new Person : python .\manage_faces.py --add
+
+
+
+
+Let's build the Streamlit dashboard to view real-time attendance from Firebase.
+1. streamlit run Dashboard.py

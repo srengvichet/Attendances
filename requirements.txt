@@ -1,0 +1,9 @@
+streamlit
+firebase-admin
+opencv-python
+facenet-pytorch
+torch
+Pillow
+numpy
+scikit-learn
+requests
