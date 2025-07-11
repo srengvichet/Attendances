@@ -1,4 +1,6 @@
 # version 3 set the location for face recognition
+import json
+
 import streamlit as st
 import cv2
 import numpy as np
@@ -18,7 +20,7 @@ from io import BytesIO
 # --- Firebase Init ---
 cred_path = "C:/Users/ADMIN/PycharmProjects/Attendance/firebase/firebase_config.json"
 if not firebase_admin._apps:
-    cred = credentials.Certificate(cred_path)
+    cred = credentials.Certificate(json.loads(st.secrets["FIREBASE_CONFIG_JSON"]))
     firebase_admin.initialize_app(cred, {
         'databaseURL': 'https://sampleapp-1fb9a-default-rtdb.asia-southeast1.firebasedatabase.app/',
         'storageBucket': 'sampleapp-1fb9a.appspot.com'

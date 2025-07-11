@@ -1,3 +1,5 @@
+import json
+
 import streamlit as st
 import firebase_admin
 from firebase_admin import credentials, db
@@ -13,7 +15,7 @@ st.set_page_config(page_title="📊 Dashboard", layout="wide")
 st.title("📊 Daily Attendance Overview")
 
 # --- Firebase ---
-cred = credentials.Certificate("firebase_config.json")
+cred = credentials.Certificate(json.loads(st.secrets["FIREBASE_CONFIG_JSON"]))
 if not firebase_admin._apps:
     firebase_admin.initialize_app(cred, {
         'databaseURL': 'https://sampleapp-1fb9a-default-rtdb.asia-southeast1.firebasedatabase.app/'
