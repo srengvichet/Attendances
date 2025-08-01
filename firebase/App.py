@@ -18,7 +18,7 @@ import requests
 from io import BytesIO
 
 # --- Firebase Init ---
-cred_path = "C:/Users/ADMIN/PycharmProjects/Attendance/firebase/firebase_config.json"
+cred_path = "firebase/firebase_config.json"
 if not firebase_admin._apps:
     cred = credentials.Certificate(json.loads(st.secrets["FIREBASE_CONFIG_JSON"]))
     firebase_admin.initialize_app(cred, {
@@ -27,7 +27,7 @@ if not firebase_admin._apps:
     })
 
 # --- Load Classifier ---
-with open('C:/Users/ADMIN/PycharmProjects/Attendance/models/face_classifier.pkl', 'rb') as f:
+with open('models/face_classifier.pkl', 'rb') as f:
     classifier, encoder, normalizer = pickle.load(f)
 
 # --- Load MTCNN & FaceNet ---
