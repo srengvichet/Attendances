@@ -196,7 +196,8 @@ if start:
 
 if cap:
     cap.release()
-    cv2.destroyAllWindows()
+    pass
+    # cv2.destroyAllWindows()
 
 st.markdown("---")
 st.markdown("🔁 After scanning, view records in the [📊 Dashboard](/Dashboard)")
