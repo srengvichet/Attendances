@@ -1,9 +1,11 @@
 streamlit
-firebase-admin
-opencv-python
-facenet-pytorch
-torch
-Pillow
+opencv-python-headless
 numpy
+pillow
+firebase-admin
+torch
+facenet-pytorch
 scikit-learn
+qrcode
 requests
+
