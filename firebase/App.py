@@ -23,7 +23,7 @@ if not firebase_admin._apps:
     cred = credentials.Certificate(json.loads(st.secrets["FIREBASE_CONFIG_JSON"]))
     firebase_admin.initialize_app(cred, {
         'databaseURL': 'https://sampleapp-1fb9a-default-rtdb.asia-southeast1.firebasedatabase.app/',
-        'storageBucket': 'sampleapp-1fb9a.appspot.com'
+        'storageBucket': 'sampleapp-1fb9a.firebasestorage.app'
     })
 
 # --- Load Classifier ---
